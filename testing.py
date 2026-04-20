@@ -1,6 +1,7 @@
 from ollama import chat
 import tiktoken
 
+model='deepseek-r1:8b '
 enc = tiktoken.get_encoding("cl100k_base")
 instruction = "you are a friendly ai assistant"
 # token counter
@@ -21,7 +22,7 @@ while True:
     # add user message
     messages.append({"role": "user", "content": user_input})
     stream = chat(
-        model='gemma3:1b',
+        model=model,
         messages=messages,
         stream=True,
     )
