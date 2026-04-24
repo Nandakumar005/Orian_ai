@@ -1,7 +1,7 @@
 from ollama import chat
 import tiktoken
 
-model='deepseek-r1:8b '
+model='gemma3:1b'
 enc = tiktoken.get_encoding("cl100k_base")
 instruction = "you are a friendly ai assistant"
 # token counter
